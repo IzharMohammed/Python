@@ -14,3 +14,10 @@ print(names)
 mixed_lists=[1,"Hello",3.14,True,False]
 print(mixed_lists)
 
+### Accessing List elements
+fruits=["apple","banana","cherry","kiwi","gauva"]
+print(fruits[4])
+print(fruits[-1])
+
+print(fruits[2:])
+print(fruits[1:3])
