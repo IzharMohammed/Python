@@ -28,7 +28,7 @@ print("-----------------")
 fruits[4]="mango"
 print(fruits)
 
-### List methos
+### List methods
 fruits.append("orange") ## Add an item to the end 
 print(fruits)
 
