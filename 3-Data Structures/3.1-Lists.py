@@ -60,3 +60,37 @@ print(fruits)
 
 fruits.clear() ## Remove all items from th list
 print(fruits)
+
+print("--------------")
+
+  ## Slicing List
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(numbers[2:5])
+print(numbers[:5])
+print(numbers[5:])
+print(numbers[::2])
+print(numbers[::-1])
+print(numbers[::2])
+
+'''
+[3, 4, 5]
+[1, 2, 3, 4, 5]
+[6, 7, 8, 9, 10]
+[1, 3, 5, 7, 9]
+[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+[1, 3, 5, 7, 9]
+'''
+
+print("-----------------")
+
+### Iterating over lists
+for number in numbers:
+    print(number)
+
+## iterating with index
+for index,number in enumerate(numbers):
+    print(index,number)
+
+
+
+
