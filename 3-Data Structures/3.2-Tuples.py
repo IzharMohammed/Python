@@ -75,11 +75,43 @@ print(lst)
 [1, 'izhar', 3, 4, 5]
 '''
 
-numbers[1]="izhar"
+# numbers[1]="izhar"
 '''
     numbers[1]="izhar"
     ~~~~~~~^^^
 TypeError: 'tuple' object does not support item assignment
 '''
 
+## Tuple methods
+print(numbers.count(1)) # 1
+print(numbers.index(3)) # 2
 
+## Packing and Unpacking tuple
+## packing
+packed_tuple=1,"Hello",3.14
+print(packed_tuple) # 1, 'Hello', 3.14)
+
+## unpacking a tuple
+a,b,c=packed_tuple
+print(a) # 1
+print(b) # Hello
+print(c) # 3.14
+
+## Unpacking with *
+numbers=(1,2,3,4,5,6)
+first,*middle,last=numbers
+
+print(first)    # 1
+print(middle)   # [2,3,4,5]
+print(last)     # 6
+
+
+
+
+
+''''
+Conclusion
+Tuples are versatile and useful in many real-world scenarios where an immutable and ordered collection of items is required. 
+They are commonly used in data structures, function arguments and return values, and as dictionary keys.
+Understanding how to leverage tuples effectively can improve the efficiency and readability of your Python code.
+'''
