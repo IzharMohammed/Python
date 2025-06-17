@@ -47,3 +47,12 @@ print(lst) ## [1, 2, 3, 4, 5, 6, 7]
 mixed_tuple=(1,"Hello world",3.14,True)
 print(mixed_tuple) ## (1, 'Hello world', 3.14, True)
 
+## Accessing tuple elements
+print(numbers)        # (1, 2, 3, 4, 5, 6)
+print(numbers[3])     # 4
+print(numbers[-1])    # 6
+print(numbers[0:4])   # (1, 2, 3, 4)
+print(numbers[::])    # (1, 2, 3, 4, 5, 6)
+print(numbers[::-1])  #(6, 5, 4, 3, 2, 1)
+
+
