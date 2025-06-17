@@ -106,3 +106,64 @@ print(student_copy1)
 {'name': 'Mohammed izhar updated', 'age': 99, 'address': 'India'}
 {'name': 'md', 'age': 99, 'address': 'India'}
 '''
+
+
+### Iterating Over Dictionaries
+## You can use loops to iterate over dictionatries, keys,values,or items
+
+## Iterating over keys
+for keys in student.keys():
+    print(keys)
+'''
+name
+age
+address
+'''
+
+
+## Iterate over values
+for value in student.values():
+    print(value)
+'''
+Mohammed izhar updated
+99
+India
+'''
+
+## Iterate over key value pairs
+for key,value in student.items():
+    print(f"{key} : {value}")
+'''
+name : Mohammed izhar updated
+age : 99
+address : India
+'''
+
+print("-----------------------")
+## Nested Disctionaries
+students={
+    "student1":{"name":"izhar","age":32},
+    "student2":{"name":"mohammed","age":35}
+}
+print(students) # {'student1': {'name': 'izhar', 'age': 32}, 'student2': {'name': 'mohammed', 'age': 35}}
+
+## Access nested dictionaries elementss
+print(students["student1"]["name"])  # izhar
+print(students["student2"]["age"])   # 35
+
+print(students.items())
+# dict_items([('student1', {'name': 'izhar', 'age': 32}), ('student2', {'name': 'mohammed', 'age': 35})])
+
+## Iterating over nested dictionaries
+for student_id,student_info in students.items():
+    print(f"{student_id} : {student_info}")
+    for key,value in student_info.items():
+        print(f"{key} : {value}")
+'''
+student1 : {'name': 'izhar', 'age': 32}
+name : izhar
+age : 32
+student2 : {'name': 'mohammed', 'age': 35}
+name : mohammed
+age : 35
+'''
