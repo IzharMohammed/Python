@@ -55,4 +55,31 @@ print(numbers[0:4])   # (1, 2, 3, 4)
 print(numbers[::])    # (1, 2, 3, 4, 5, 6)
 print(numbers[::-1])  #(6, 5, 4, 3, 2, 1)
 
+##Tuple operations
+concatenation_tuple=numbers + mixed_tuple
+print(concatenation_tuple) # (1, 2, 3, 4, 5, 6, 1, 'Hello world', 3.14, True)
+print(mixed_tuple*3)       # (1, 'Hello world', 3.14, True, 1, 'Hello world', 3.14, True, 1, 'Hello world', 3.14, True)
+print(numbers*3)           # (1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6)
+
+print("---------------------")
+
+## Immutable Nature Of Tuples
+## Tuples are immutable, meaning their elements cannot be changed once assigned.
+lst=[1,2,3,4,5]
+print(lst)
+
+lst[1]="izhar"
+print(lst)
+'''
+[1, 2, 3, 4, 5]
+[1, 'izhar', 3, 4, 5]
+'''
+
+numbers[1]="izhar"
+'''
+    numbers[1]="izhar"
+    ~~~~~~~^^^
+TypeError: 'tuple' object does not support item assignment
+'''
+
 
