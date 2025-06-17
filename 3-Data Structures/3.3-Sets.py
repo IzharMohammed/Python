@@ -97,3 +97,39 @@ print(set2.difference(set1)) # {8,9,7}
 ## Symmetric Difference
 print(set1.symmetric_difference(set2)) # {1, 2, 3, 7, 8, 9}
 
+
+print("-----------------")
+## sets methods
+set1={1,2,3,4,5}
+set2={3,4,5}
+
+print(set2.issubset(set1))   # True
+print(set1.issuperset(set2)) # True
+
+lst=[1,2,2,3,4,4,5]
+
+print(set(lst)) # {1, 2, 3, 4, 5}
+
+
+### Counting Unique words in text
+
+text="In this tutorial we are discussing about sets In this tutorial we are discussing about sets"
+words=text.split()
+print(words)
+# ['In', 'this', 'tutorial', 'we', 'are', 'discussing', 'about', 'sets', 'In', 'this', 'tutorial', 'we', 'are', 'discussing', 'about', 'sets']
+
+## convert list of words to set to get unique words
+unique_words=set(words)
+print(unique_words)         # {'sets', 'discussing', 'we', 'about', 'In', 'this', 'are', 'tutorial'}
+print(len(unique_words))    # 8
+
+
+
+
+'''
+Conclusion:
+Sets are a powerful and flexible data type in Python that provide a way to store collections of unique elements.
+They support various operations such as union, intersection, difference, and symmetric difference, which are useful 
+for mathematical computations. Understanding how to use sets and their associated methods can help you write more 
+efficient and clean Python code, especially when dealing with unique collections and membership tests.
+'''
