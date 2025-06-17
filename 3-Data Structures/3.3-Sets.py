@@ -26,5 +26,46 @@ my_empty_set=set([1,2,3,6,5,4,5,6,1,2,3,4,5,6,1,2,3,4,5,5,5,2,2])
 print(my_empty_set) # {1, 2, 3, 4, 5, 6}
 
 
+print("----------------------")
+## Basics Sets Operation
+## Adding and Removing Elements
+my_set.add(7)
+print(my_set)
+my_set.add(7)
+print(my_set)
+'''
+{1, 2, 3, 4, 5, 6, 7}
+{1, 2, 3, 4, 5, 6, 7}
+'''
+
+## Remove the elements from a set
+my_set.remove(3)
+print(my_set)    # {1, 2, 4, 5, 6, 7}
+
+# my_set.remove(100)
+'''
+KeyError                                  Traceback (most recent call last)
+Cell In[11], line 1
+----> 1 my_set.remove(10)
+
+KeyError: 10
+'''
+
+my_set.discard(99)
+print(my_set)  # {1, 2, 4, 5, 6, 7}
+
+## pop method
+removed_element=my_set.pop()
+print(removed_element) # 1
+print(my_set)          # {2, 4, 5, 6, 7} 
+
+## clear all elements
+my_set.clear()
+print(my_set)   # set()
+
+## Set Memebership test
+my_set={1,2,3,4,5}
+print(3 in my_set)      # True
+print(10 in my_set)     # False
 
 
