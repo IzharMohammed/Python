@@ -57,5 +57,52 @@ print(student)                # {'name': 'izhar', 'age': 99, 'grade': 'A', 'addr
 del student["grade"]
 print(student)                 # {'name': 'izhar', 'age': 99, 'address': 'India'}
 
+print("----------------------")
+## Dictionary methods
 
+keys=student.keys() ##get all the keys
+print(keys)
+values=student.values() ##get all values
+print(values)
 
+items=student.items() ##get all key value pairs
+print(items)
+'''
+dict_keys(['name', 'age', 'address'])
+dict_values(['izhar', 99, 'India'])
+dict_items([('name', 'izhar'), ('age', 99), ('address', 'India')])
+'''
+
+## shallow copy
+student_copy=student
+print(student)
+print(student_copy)
+'''
+{'name': 'izhar', 'age': 99, 'address': 'India'}
+{'name': 'izhar', 'age': 99, 'address': 'India'}
+'''
+
+student["name"]="md"
+print(student)
+print(student_copy)
+'''
+{'name': 'md', 'age': 99, 'address': 'India'}
+{'name': 'md', 'age': 99, 'address': 'India'}
+'''
+
+print("----------------")
+student_copy1=student.copy() ## shallow copy
+print(student_copy1)
+print(student)
+'''
+{'name': 'md', 'age': 99, 'address': 'India'}
+{'name': 'md', 'age': 99, 'address': 'India'}
+'''
+
+student["name"] = "Mohammed izhar updated"
+print(student)
+print(student_copy1)
+'''
+{'name': 'Mohammed izhar updated', 'age': 99, 'address': 'India'}
+{'name': 'md', 'age': 99, 'address': 'India'}
+'''
