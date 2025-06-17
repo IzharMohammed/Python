@@ -30,3 +30,21 @@ if(is_delete=="y"):
     is_delete_element=str(input("Enter a element u want to delete"))
     todo_list.remove(is_delete_element)
     print(todo_list)
+
+
+## Example 2: Organizing Student Grades
+## Create a list to store and calculate average grades for students
+
+ran = int(input('Enter no of students r present: '))
+grades_list=[]
+for i in range(ran):
+    grades = int(input("Enter grades of students: "))
+    grades_list.insert(i,grades)
+
+print(grades_list)
+average_grade=sum(grades_list)/len(grades_list)
+
+print(f"avg is: {average_grade}")
+print(f"highest is: {max(grades_list)}")
+print(f"lowest is: {min(grades_list)}")
+
