@@ -105,7 +105,40 @@ print(first)    # 1
 print(middle)   # [2,3,4,5]
 print(last)     # 6
 
+## Nested Tuple
+## Nested List
+lst=[[1,2,3,4],[6,7,8,9],[1,"Hello",3.14,"c"]]
+print(lst[0][1:3]) # [2,3]
+print(lst[2][1:3]) # ['Hello', 3.14]
 
+lst=[[1,2,3,4],[6,7,8,9],(1,"Hello",3.14,"c")]
+print(lst[2][0:3]) # (1, 'Hello', 3.14)
+
+nested_tuple = ((1, 2, 3), ("a", "b", "c"), (True, False))
+
+## access the elements inside a tuple
+print(nested_tuple[0])      # (1,2,3)
+print(nested_tuple[1][2])   # c
+
+print("------------------")
+## ## iterating over nested tuples
+for sub_tuple in nested_tuple:
+    for item in sub_tuple:
+        print(f"{sub_tuple} : {item}")
+    print()
+
+'''
+(1, 2, 3) : 1
+(1, 2, 3) : 2
+(1, 2, 3) : 3
+
+('a', 'b', 'c') : a
+('a', 'b', 'c') : b
+('a', 'b', 'c') : c
+
+(True, False) : True
+(True, False) : False
+'''
 
 
 
