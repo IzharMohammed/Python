@@ -167,3 +167,45 @@ student2 : {'name': 'mohammed', 'age': 35}
 name : mohammed
 age : 35
 '''
+
+print("-----------------------")
+
+## Dictionary comprehension
+squares ={x:x**2 for x in range(10)}
+print(squares) # {0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81}
+
+## Condition dictionary comprehension
+evens={x:x**2 for x in range(10) if x%2==0}
+print(evens)  # {0: 0, 2: 4, 4: 16, 6: 36, 8: 64}
+
+## Practical Examples
+
+## Use a dictionary to count the frequency of elements in list
+numbers=[1,2,2,3,3,3,4,4,4,4]
+frequency={}
+
+for num in numbers:
+    if num in frequency:
+        frequency[num]+=1
+    else:
+        frequency[num]=1
+
+print(frequency) # {1: 1, 2: 2, 3: 3, 4: 4}
+
+## Merge 2 dictionaries into one
+
+dict1={"a":1,"b":2}
+dict2={"b":3,"c":4}
+merged_dict={**dict1,**dict2}
+print(merged_dict)  # {'a': 1, 'b': 3, 'c': 4}
+
+
+
+
+'''
+Conclusion:
+Dictionaries are powerful tools in Python for managing key-value pairs.
+They are used in a variety of real-world scenarios, such as counting word frequency, grouping data,
+storing configuration settings, managing phonebooks, tracking inventory, and caching results.
+ Understanding how to leverage dictionaries effectively can greatly enhance the efficiency and readability of your code.
+'''
